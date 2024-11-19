@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Clone</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <style>
+        div{
+            /* border: 1px solid red; */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- navbar --> 
+        <div class="flex items-center justify-between px-16 h-20 border-b-[1px] fixed top-0 bg-white w-screen">
+            <div class="flex-1"><img src="static/airbnb-logo.png" alt="logo" class="h-16 min-w-28"></div>
+    
+            <div class="flex items-center justify-evenly border rounded-full shadow-md h-12 w-96">
+                <button class="pr-5 border-r-2 text-sm font-medium">Anywhere</button>
+                <button class="pr-5  border-r-2 text-sm font-medium min-w-max">Any Week</button>
+                <button class="pr-0 text-sm font-medium text-gray-500 min-w-max">Any Guests</button>
+                <i class="fa-solid fa-magnifying-glass bg-red-600 text-white rounded-full p-2"></i>
+            </div>
+    
+            <div class="flex items-center justify-end gap-2 flex-1">
+                <button class="font-medium text-sm min-w-max">Airbnb your home</button>
+                <span class="material-symbols-outlined">language</span>
+                <div class="flex items-center justify-center gap-2 border-2 rounded-full h-10 w-20 shadow-md py-1.25 pr-1.25 pl-2">
+                    <div class="fa-solid fa-bars"></div>
+                    <button class="bg-black w-7 h-7 rounded-full text-white text-center text-[10px] font-semibold">R</button>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- Category bar -->
+         <div class="flex items-center h-24 gap-5 justify-center w-fit mx-auto fixed top-20 bg-white w-screen">
+            <div class="flex items-center gap-14">
+                <div class="flex flex-col items-center gap-2 black cursor-pointer ">
+                    <img src="./static/type1.jpeg" alt="img" class="h-6 w-6">
+                    <p class="text-xs font-normal">Amazing Pools</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black cursor-pointer">
+                    <img src="./static/type2.jpeg" alt="img" class="h-6 w-6">
+                    <p class="text-xs font-normal">Play</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black cursor-pointer">
+                    <img src="./static/type3.jpeg" alt="img" class="h-6 w-6">
+                    <p class="text-xs font-normal">Historical Homes</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black cursor-pointer">
+                    <img src="./static/type4.jpeg" alt="img" class="h-6 w-6">
+                    <p class="text-xs font-normal">Countryside</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black cursor-pointer">
+                    <img src="./static/type5.jpeg" alt="img" class="h-6 w-6">
+                    <p class="text-xs font-normal">Surfing</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black cursor-pointer">
+                    <img src="./static/type6.jpeg" alt="img" class="h-6 w-6">
+                    <p class="text-xs font-normal">Farms</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black cursor-pointer">
+                    <img src="./static/type7.jpeg" alt="img" class="h-6 w-6">
+                    <p class="text-xs font-normal">Amazing Views</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black cursor-pointer">
+                    <img src="./static/type8.jpeg" alt="img" class="h-6 w-6">
+                    <p class="text-xs font-normal">Rooms</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black cursor-pointer">
+                    <img src="./static/type9.jpeg" alt="img" class="h-6 w-6">
+                    <p class="text-xs font-normal">Lakefront</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black cursor-pointer">
+                    <img src="./static/type10.jpeg" alt="img" class="h-6 w-6">
+                    <p class="text-xs font-normal">Beachfront</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black cursor-pointer">
+                    <img src="./static/type11.jpeg" alt="img" class="h-6 w-6">
+                    <p class="text-xs font-normal">OMG!</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black cursor-pointer">
+                    <img src="./static/type12.jpeg" alt="img" class="h-6 w-6">
+                    <p class="text-xs font-normal">Golfing</p>
+                </div>
+                
+            </div>
+
+            <span class="material-symbols-outlined cursor-pointer pl-4">arrow_circle_right</span>
+            <div class="flex cursor-pointer gap-3 border rounded-2xl p-2 shadow-md">
+                <span class="material-symbols-outlined">sync_alt</span>
+                <p>Filters</p>
+            </div>
+         </div>
+
+        <!-- Price bar -->
+         <div class="flex justify-center mt-48">
+            <div class="flex items-center justify-between border rounded-xl w-[600px] h-16 p-4">
+                <div class="flex justify-start">
+                    <p class="border-r-2 border-gray-100 pr-4 text-base font-medium">Display total price</p>
+                    <p class="pl-4 text-gray-400 text-base">Includes all fees, before taxes</p>
+                </div>
+                <span class="material-symbols-outlined">toggle_off</span>
+            </div>
+         </div>
+
+    </header>
+
+    <!-- Hotel Info -->
+    <main class="">
+        <div class="grid grid-cols-4 justify-items-center justify-self-center gap-x-14 mt-12">
+            <div class="flex flex-col h-96 w-72">
+                <img src="static/img1.jpg" alt="hotels" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Lonavala, India</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">5.0</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">62 kilmeters away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+
+            <div class="flex flex-col h-96 w-72">
+                <img src="static/img2.jpg" alt="hotels" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Lonavala, India</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">5.0</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">62 kilmeters away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+
+            <div class="flex flex-col h-96 w-72">
+                <img src="static/img3.jpg" alt="hotels" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Lonavala, India</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">5.0</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">62 kilmeters away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+
+            <div class="flex flex-col h-96 w-72">
+                <img src="static/img4.jpg" alt="hotels" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Lonavala, India</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">5.0</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">62 kilmeters away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+
+            <div class="flex flex-col h-96 w-72">
+                <img src="static/img1.jpg" alt="hotels" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Lonavala, India</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">5.0</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">62 kilmeters away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+
+            <div class="flex flex-col h-96 w-72">
+                <img src="static/img2.jpg" alt="hotels" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Lonavala, India</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">5.0</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">62 kilmeters away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+
+            <div class="flex flex-col h-96 w-72">
+                <img src="static/img3.jpg" alt="hotels" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Lonavala, India</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">5.0</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">62 kilmeters away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+
+            <div class="flex flex-col h-96 w-72">
+                <img src="static/img4.jpg" alt="hotels" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Lonavala, India</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">5.0</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">62 kilmeters away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+
+            <div class="flex flex-col h-96 w-72">
+                <img src="static/img1.jpg" alt="hotels" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Lonavala, India</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">5.0</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">62 kilmeters away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+
+            <div class="flex flex-col h-96 w-72">
+                <img src="static/img2.jpg" alt="hotels" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Lonavala, India</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">5.0</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">62 kilmeters away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+
+            <div class="flex flex-col h-96 w-72">
+                <img src="static/img3.jpg" alt="hotels" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Lonavala, India</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">5.0</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">62 kilmeters away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+
+            <div class="flex flex-col h-96 w-72">
+                <img src="static/img4.jpg" alt="hotels" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Lonavala, India</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">5.0</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">62 kilmeters away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+
+            <div class="flex flex-col h-96 w-72">
+                <img src="static/img1.jpg" alt="hotels" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Lonavala, India</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">5.0</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">62 kilmeters away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+
+            <div class="flex flex-col h-96 w-72">
+                <img src="static/img2.jpg" alt="hotels" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Lonavala, India</p>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">5.0</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400">62 kilmeters away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="flex justify-between p-4 fixed bottom-0 bg-white w-screen">
+        <div class="flex gap-2">
+            <p>&copy; 2024 Airbnb, Inc.</p>
+            <p>.</p>
+            <p>Privacy</p>
+            <p>.</p>
+            <p>Terms</p>
+            <p>.</p>
+            <p>Sitemap</p>
+            <p>.</p>
+            <p>Company details</p>
+        </div>
+        <div class="flex gap-x-4 items-center">
+            <span class="material-symbols-outlined">language</span>
+            <p>English(IN)</p>
+            <p class="font-bold">₹</p>
+            <a href="#" class="hover:underline">Support & resources</a>
+            <p class="mr-5 font-bold pt-2">^</p>
+        </div>
+    </footer>
+</body>
+</html>
