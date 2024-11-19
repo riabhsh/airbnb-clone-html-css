@@ -2,5 +2,5 @@
 Airbnb Home Page Clone with Tailwindcss
 
 ## Preview
-![airbnb clone](screenchot]https://raw.githubusercontent.com/riabhsh/airbnb-clone-html-tailwind/main/snap.png)
+![airbnb clone](https://raw.githubusercontent.com/riabhsh/airbnb-clone-html-tailwind/main/snap.png)
 
